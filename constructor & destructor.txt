@@ -1,0 +1,128 @@
+Skip to content
+Why GitHub? 
+Team
+Enterprise
+Explore 
+Marketplace
+Pricing 
+Search
+
+Sign in
+Sign up
+leviathanblade007
+/
+c-cpp-unschool.in
+100
+Code
+Issues
+Pull requests
+Actions
+Projects
+Security
+Insights
+Join GitHub today
+GitHub is home to over 50 million developers working together to host and review code, manage projects, and build software together.
+
+c-cpp-unschool.in/calc.cpp
+@leviathanblade007
+leviathanblade007 Add files via upload
+…
+Latest commit 3d6cd75 on 18 Aug
+ History
+ 1 contributor
+82 lines (80 sloc)  1.67 KB
+  
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+#include <stdlib.h>
+void sum();
+void div();
+void product();
+void subs();
+using namespace std;
+double ans;
+int n1,n2;
+class cls
+{
+public:
+    cls()
+    {
+        char a[5];
+        cout << "Enter what u want to do :\n + for addition \n - for substraction \n * for multiplication \n / for division \n ";
+        cin >> a;
+        cout << "\nEnter the 1st n 2nd nos : \n";
+        cin >> n1 >> n2;
+        if((strcmp(a,"+"))==0)
+        {
+            sum();
+        }
+        else if((strcmp(a,"-"))==0)
+        {
+            subs();
+        }
+        else if((strcmp(a,"*"))==0)
+        {
+            product();
+        }
+        else if((strcmp(a,"/"))==0)
+        {
+            div();
+        }
+        
+    }
+    ~cls()
+    {}
+};
+    void sum()
+    {
+        ans=n1+n2;
+        cout << "\nSum of "<<n1<<" and "<<n2<<" is "<<ans<<endl;
+    }
+    void product()
+    {
+        ans=n1*n2;
+        cout << "\nProduct of "<<n1<<" and "<<n2<<" is "<<ans<<endl;
+    }
+    void div()
+    {
+        ans=n1/n2;
+        cout<<"\nQuotient of "<<n1<<" and "<<n2<<" is "<<ans<<endl;
+    }
+    void subs()
+    {
+        ans=n1-n2;
+        cout<<"\nDifference of "<<n1<<" and "<<n2<<" is "<<ans<<endl;
+    } 
+int main()
+{
+    
+    while(1)
+    {
+        char a[5];
+        cls obj;
+        cout << "\n\n Do you want to do another operation ?\n Enter yes or no\n ";
+        cin >>a;
+        if((strcmp(a,"yes"))==0)
+        {
+            system("CLS");
+        }
+        else if((strcmp(a,"no"))==0)
+        {
+            cout<<"Destructor called ";
+            break;
+        } 
+    }
+}
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
